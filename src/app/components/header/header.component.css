@@ -1,0 +1,20 @@
+
+.title{
+    font-weight: bold;
+}
+
+#cart{
+    margin-right: 20px;
+    font-size: large;
+}
+
+#cart span{
+    background-color: rgb(49, 160, 235);
+    padding: 2px;
+    border-radius: 20px;
+    margin: 0 2px;
+}
+
+.user{
+    margin: 0 9px;
+}

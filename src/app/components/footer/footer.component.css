@@ -1,0 +1,32 @@
+footer{
+    padding: 24px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    line-height: 2;
+}
+
+#flexbox{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer li{
+    list-style: none;
+}
+
+
+footer h4{
+    color: rgb(186, 186, 186);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#copy{
+    margin: 2% 0 0 0;
+    text-align: center;
+}
