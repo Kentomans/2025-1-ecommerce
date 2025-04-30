@@ -5,7 +5,8 @@ import { Injectable, signal } from '@angular/core';
 })
 export class CartService {
 
-  constructor() { }
+  constructor() {
+   }
 
   getCart():number[]{
     const productoId = localStorage.getItem('idProduct') ;
@@ -28,9 +29,13 @@ export class CartService {
 
   removeFromCart(id:number){
     this.decremento();
-    const prod= this.getCart();
-    const updated = prod.filter(item => item !== id);
-    localStorage.setItem('idProduct', JSON.stringify(updated));
+
+  const prod = this.getCart(); 
+  const index = prod.indexOf(id);
+  if (index !== -1) {
+    prod.splice(index, 1); 
+  }
+  localStorage.setItem('idProduct', JSON.stringify(prod));
   }
 
 

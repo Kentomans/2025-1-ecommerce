@@ -6,6 +6,23 @@
               <!-- <a href="" routerLink="productos">Seguir Comprando <i class="fa-solid fa-arrow-right"></i></a> -->
          </div>
          <!-- Me va imprimir el Carrito abajo -->
+
+         <div>
+            @for (item of carritoProductos; track item) {
+              <img [src]="item.producto.img" [alt]="item.producto.name">
+              <h3>{{ item.producto.name }}</h3>
+              <p class="price">${{ item.producto.price }}</p>
+              
+              <button (click)="quitarUno(item.producto.id)">-</button>
+              <span>{{ item.cantidad }}</span>
+              <button (click)="agregarUno(item.producto.id)">+</button>
+              
+              <h1>Total</h1><span>${{ item.producto.price * item.cantidad }}</span>
+            }
+          </div>
+          
+          <h2>Total general: ${{ calcularTotal() }}</h2>
+          
     </div>
 
     <div id="part-2">
