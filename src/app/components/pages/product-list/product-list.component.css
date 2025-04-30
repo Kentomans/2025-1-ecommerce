@@ -14,3 +14,7 @@
     background-color: rgb(221, 221, 221);
     box-shadow: rgb(3, 120, 255) 0px 0px 0px 2px;
   }
+
+  .price {
+    color: rgb(0, 71, 151);
+  }

@@ -30,7 +30,16 @@
         </ul>
         
         <div id="cart">
-          <!-- <span>5</span>--><!-- Aqui va el numero de total de agregados  -->
+
+        @if(counter()<=0){
+
+        }@else{
+          <span>{{counter()}}</span><!-- Aqui va el numero de total de agregados  -->
+        }
+    
+
+
+
           <a href="" routerLink="carrito"><i class="fa-solid fa-cart-shopping"></i></a>
           
           <a href=""><i class="fa-solid fa-user user"></i></a>

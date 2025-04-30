@@ -6,9 +6,11 @@
             <img [src]="item.img" class="card-img-top" [alt]="item.name">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">{{ item.name }}</h5>
-              <p class="text-center text-muted">${{ item.price }}</p>
+              <p class="text-center price">${{ item.price }}</p>
               <p class="card-text">{{ item.description }}</p>
-              <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button (click)="addToCart(item.id)" type="button" class="btn btn-outline-primary mt-auto">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>              
             </div>
           </div>
         </div>

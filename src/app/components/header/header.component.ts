@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,17 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  counter: Signal<number>
+
+  constructor(private  cartService: CartService){
+
+    this.counter = cartService.getCounter();
+    cartService.getCart();
+  }
+
+  
+  
+  
 
 }
