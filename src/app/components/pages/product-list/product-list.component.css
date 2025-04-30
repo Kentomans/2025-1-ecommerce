@@ -7,9 +7,10 @@
   .conte{
     margin: 25px 0;
     text-align: center;
-   
+  
   }
 
   .color{
     background-color: rgb(221, 221, 221);
+    box-shadow: rgb(3, 120, 255) 0px 0px 0px 2px;
   }

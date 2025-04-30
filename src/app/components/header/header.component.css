@@ -8,13 +8,25 @@
     font-size: large;
 }
 
-#cart span{
-    background-color: rgb(49, 160, 235);
-    padding: 2px;
-    border-radius: 20px;
+#cart span {
+    background-color: rgb(0, 140, 255);
+    width: 20px;
+    height: 20px;
+    display: inline-flex;       
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;         
+    color: white;               
+    font-size: 14px;            
     margin: 0 2px;
-}
+  }
+  
 
 .user{
     margin: 0 9px;
+}
+
+#cart a{
+    text-decoration: none;
+   color: black;
 }
