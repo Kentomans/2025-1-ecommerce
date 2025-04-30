@@ -1,1 +1,126 @@
-<p>checkout works!</p>
+<div class="container conta">
+    <div>
+        
+        <form class="row g-3 needs-validation" novalidate [formGroup]="adress" (ngSubmit)="onSubmit()">
+
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip01 name" class="form-label" >Nombre</label>
+              <input type="text" class="form-control" id="validationTooltip01 name" formControlName="name" required>
+              @if (adress.get('name')?.invalid && (adress.get('name')?.dirty || adress.get('name')?.touched)) {
+                    <div class="text-danger">
+                        El nombre es Requerido
+                    </div>
+              }
+            </div>
+
+            <div class="col-md-6 position-relative">
+                <label for="validationTooltip01 firsLastName" class="form-label" >Primer Apellido</label>
+                <input type="text" class="form-control" id="validationTooltip01 firstLastName" formControlName="firstLastName" required>
+                @if (adress.get('firstLastName')?.invalid && (adress.get('firstLastName')?.dirty || adress.get('firstLastName')?.touched)) {
+                      <div class="text-danger">
+                          El primer Apellido es Requerido
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-6 position-relative">
+                <label for="validationTooltip01 secondLastName" class="form-label" >Segundo Apellido</label>
+                <input type="text" class="form-control" id="validationTooltip01 secondLastName" formControlName="secondLastName" required>
+                @if (adress.get('secondLastName')?.invalid && (adress.get('secondLastName')?.dirty || adress.get('secondLastName')?.touched)) {
+                      <div class="text-danger">
+                          El segundo Apellido es Requerido
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01 tel" class="form-label" >Telefono</label>
+                <input type="tel" class="form-control" id="validationTooltip01   tel" formControlName="tel" required>
+                @if (adress.get('tel')?.invalid && (adress.get('tel')?.dirty || adress.get('tel')?.touched)) {
+                      <div class="text-danger">
+                          El Telefono es Requerido
+                      </div>
+                }
+              </div>
+
+             
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01 email" class="form-label" >Email</label>
+                <input type="email" class="form-control" id="validationTooltip01 email" formControlName="email" required>
+                @if (adress.get('email')?.invalid && (adress.get('email')?.dirty || adress.get('email')?.touched)) {
+                      <div class="text-danger">
+                          El Email es Requerido o es incorrecto
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01 city" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="validationTooltip01 city" formControlName="city" required>
+                @if (adress.get('city')?.invalid && (adress.get('city')?.dirty || adress.get('city')?.touched)) {
+                      <div class="text-danger">
+                          El nombre de la Ciudad es Requerida
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-2 position-relative">
+                <label for="validationTooltip01 postal" class="form-label">Numero postal</label>
+                <input type="text" class="form-control" id="validationTooltip01 postal" formControlName="postal" required>
+                @if (adress.get('postal')?.invalid && (adress.get('postal')?.dirty || adress.get('postal')?.touched)) {
+                      <div class="text-danger">
+                          El numero Postal es Requerido
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01 colonia" class="form-label">Colonia</label>
+                <input type="text" class="form-control" id="validationTooltip01 colonia" formControlName="colonia" required>
+                @if (adress.get('colonia')?.invalid && (adress.get('colonia')?.dirty || adress.get('colonia')?.touched)) {
+                      <div class="text-danger">
+                          La Colonia es Requerida
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01 calle" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="validationTooltip01 calle" formControlName="calle" required>
+                @if (adress.get('calle')?.invalid && (adress.get('calle')?.dirty || adress.get('calle')?.touched)) {
+                      <div class="text-danger">
+                          La Calle es Requerida
+                      </div>
+                }
+              </div>
+
+              <div class="col-md-2 position-relative">
+                <label for="validationTooltip01 NoExter" class="form-label">Numero Exterior</label>
+                <input type="tel" class="form-control" id="validationTooltip01 NoExter" formControlName="NoExter" required>
+                @if (adress.get('NoExter')?.invalid && (adress.get('NoExter')?.dirty || adress.get('NoExter')?.touched)) {
+                      <div class="text-danger">
+                          El Numero Exterior es Requerido
+                      </div>
+                }
+              </div>
+
+              <div class="form-check ">
+                <input class="form-check-input" type="checkbox" value="" id="checkDefault agreeTerms" formControlName="agreeTerms">
+                <label class="form-check-label" for="checkDefault agreeTerms">
+                  Acepto los Terminos y Coindiciones
+                </label>
+
+                @if (adress.get('agreeTerms')?.invalid && adress.get('agreeTerms')?.dirty) {
+                    <div class="text-danger">
+                        Debes aceptar los Terminos y condiciones
+                    </div>
+                }
+              </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary btn-lock" [disabled]="adress.invalid" type="submit">Submit form</button>
+            </div>
+          </form>
+
+    </div>
+</div>
