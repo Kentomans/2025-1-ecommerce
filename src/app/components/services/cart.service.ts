@@ -10,7 +10,6 @@ export class CartService {
   getCart():number[]{
     const productoId = localStorage.getItem('idProduct') ;
     if(productoId === null){
-      this.reset();
       return [];
     }
     const prod = JSON.parse(productoId);

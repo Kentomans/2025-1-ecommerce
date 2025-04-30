@@ -11,11 +11,15 @@ import { CartService } from '../services/cart.service';
 export class HeaderComponent {
 
   counter: Signal<number>
+ 
+
 
   constructor(private  cartService: CartService){
 
     this.counter = cartService.getCounter();
     cartService.getCart();
+    console.log("Tot = ",this.counter);
+
   }
 
  

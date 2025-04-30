@@ -17,9 +17,9 @@
                     <p class="text-center price">${{ item.producto.price }}</p>
           
                     <div class="d-flex justify-content-center align-items-center mb-2">
-                      <button (click)="quitarUno(item.producto.id)" class="btn btn-sm btn-outline-danger me-2">-</button>
+                      <button (click)="quitarUno(item.producto.id)" class="btn btn-outline-primary mt-auto"><i class="fa-solid fa-minus"></i></button>
                       <span class="px-2">{{ item.cantidad }}</span>
-                      <button (click)="agregarUno(item.producto.id)" class="btn btn-sm btn-outline-success ms-2">+</button>
+                      <button (click)="agregarUno(item.producto.id)" class="btn btn-outline-primary mt-auto"><i class="fa-solid fa-plus"></i></button>
                     </div>
           
                     <p class="text-center fw-bold">Total: ${{ item.producto.price * item.cantidad }}</p>
@@ -33,16 +33,36 @@
         <div id="nada" >
             <h1>No hay productos agregados!</h1>
         </div>
-     }
-          
-          
-          
+     } 
     </div>
 
     <div class="card-s">
         <div id="part-sup">
-             <h1>Total ${{ calcularTotal() }}</h1>
-                <h1>etc</h1>
+           
+            <h3>Mis Cupones</h3>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="CÓDIGO PROMOCIONAL" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button type="button" class="btn btn-outline-secondary">Aplicar</button>
+            </div>
          </div>
+
+         <div id="middle">
+            <div class="cont-1">
+                <h4>Subtotal </h4><span>${{ calcularTotal()}}</span>
+            </div>
+            <div class="cont-1">
+                <h4>Costo de Envio</h4> <span>Gratis</span>
+            </div>
+         </div>
+
+
+
+
+         <div id="part-infe">
+            <h2>Total </h2> <span>${{ calcularTotal() }}</span>
+            
+         </div>
+         <div id="button-fin"></div>
+         <button type="button" class="btn btn-outline-primary btn-lg asbut">Continuar</button>
     </div>
 </div>
