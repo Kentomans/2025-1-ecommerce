@@ -18,8 +18,6 @@ export class HeaderComponent {
     cartService.getCart();
   }
 
-  
-  
-  
+ 
 
 }

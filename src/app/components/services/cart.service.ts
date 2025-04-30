@@ -5,19 +5,21 @@ import { Injectable, signal } from '@angular/core';
 })
 export class CartService {
 
-  constructor() {
-   }
+  constructor(){}
 
   getCart():number[]{
     const productoId = localStorage.getItem('idProduct') ;
     if(productoId === null){
+      this.reset();
       return [];
     }
     const prod = JSON.parse(productoId);
     const length = prod.length;
     this.count.update(n => length);
+
     return prod;
   }
+
 
   addToCart(id:number){
     this.incremento();

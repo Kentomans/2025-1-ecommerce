@@ -2,5 +2,67 @@
 #cart-container{
     padding: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    min-height: calc(100vh - 100px);
+   
 }
+
+#part-sup{
+    margin: 5px 60px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+  }
+
+  .conte{
+    margin: 25px 0px;
+    text-align: center;
+  
+  }
+
+  .color{
+    background-color: rgb(221, 221, 221);
+    box-shadow: rgb(3, 120, 255) 0px 0px 0px 2px;
+  }
+
+  .price {
+    color: rgb(0, 71, 151);
+  }
+
+.card-s{
+    padding: 10px 70px;
+    margin: 20px;
+    background-color: rgb(221, 221, 221);
+    color: black;
+    border-radius: 9px;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  
+  #cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    max-width: 250px;
+    flex-grow: 0;
+  }
+  
+  #nada h1{
+       text-align: center;
+       font-size: 78px;
+       align-items: center;
+       height: 50vh; 
+       display: flex;
+       justify-content: center; 
+    
+  }
