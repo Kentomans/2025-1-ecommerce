@@ -106,21 +106,22 @@
                 }
               </div>
 
-              <div class="form-check ">
+              <div class="form-check a ">
                 <input class="form-check-input" type="checkbox" value="" id="checkDefault agreeTerms" formControlName="agreeTerms">
                 <label class="form-check-label" for="checkDefault agreeTerms">
                   Acepto los Terminos y Coindiciones
                 </label>
 
                 @if (adress.get('agreeTerms')?.invalid && adress.get('agreeTerms')?.dirty) {
-                    <div class="text-danger">
+                    <div class="text-danger ">
                         Debes aceptar los Terminos y condiciones
                     </div>
                 }
               </div>
 
             <div class="col-12">
-              <button class="btn btn-primary btn-lock" [disabled]="adress.invalid" type="submit">Submit form</button>
+                <button class="btn btn-primary" routerLink="/carrito">Anterior</button>
+                <button class="btn btn-primary btn-lock" [disabled]="adress.invalid" type="submit">Siguiente</button>
             </div>
           </form>
 
