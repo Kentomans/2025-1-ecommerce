@@ -117,3 +117,7 @@
     font-size: 15px;
     margin: 32px 0;
   }
+
+  .a3{
+    cursor: no-drop;
+  }

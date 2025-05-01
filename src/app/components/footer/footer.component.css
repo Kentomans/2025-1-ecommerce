@@ -28,6 +28,21 @@ footer h4{
 }
 
 #copy{
-    margin: 2% 0 0 0;
+    margin: 2% 0;
     text-align: center;
+}
+
+.fa-arrow-right{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.r{
+    margin: 0 4px 0 0;
+}
+
+.foot h4{
+    text-decoration-line: underline;         
+  text-decoration-style: solid;           
+  text-decoration-color: rgb(255, 255, 255); 
 }

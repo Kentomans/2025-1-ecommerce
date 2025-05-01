@@ -3,10 +3,7 @@
     <div id="part-1">
         <div id="part-sup">
              <h1>Tu Carrito ({{counter()}})</h1>
-              <!-- <a href="" routerLink="productos">Seguir Comprando <i class="fa-solid fa-arrow-right"></i></a> -->
          </div>
-         <!-- Me va imprimir el Carrito abajo -->
-
          <div class="row">
             @for (item of carritoProductos; track item) {
               <div class="conte">
@@ -15,37 +12,31 @@
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center">{{ item.producto.name }}</h5>
                     <p class="text-center price">${{ item.producto.price }}</p>
-          
                     <div class="d-flex justify-content-center align-items-center mb-2">
                       <button (click)="quitarUno(item.producto.id)" class="btn btn-outline-primary mt-auto"><i class="fa-solid fa-minus"></i></button>
                       <span class="px-2">{{ item.cantidad }}</span>
                       <button (click)="agregarUno(item.producto.id)" class="btn btn-outline-primary mt-auto"><i class="fa-solid fa-plus"></i></button>
                     </div>
-          
                     <p class="text-center fw-bold">Total: ${{ item.producto.price * item.cantidad }}</p>
                   </div>
                 </div>
               </div>
             }
           </div>
-
     @if (carritoProductos.length === 0) {
         <div id="nada" >
             <h1>No hay productos agregados!</h1>
         </div>
      } 
     </div>
-
     <div class="card-s">
-        <div id="part-sup">
-           
+        <div id="part-sup"> 
             <h3>Mis Cupones</h3>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="CÓDIGO PROMOCIONAL" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button type="button" class="btn btn-outline-secondary">Aplicar</button>
             </div>
          </div>
-
          <div id="middle">
             <div class="cont-1">
                 <h4>Subtotal </h4><span>${{ calcularTotal()}}</span>
@@ -54,16 +45,15 @@
                 <h4>Costo de Envio</h4> <span>Gratis</span>
             </div>
          </div>
-
-
-
-
          <div id="part-infe">
             <h2>Total </h2> <span>${{ calcularTotal() }}</span>
             
          </div>
          <div id="button-fin"></div>
-         <button type="button" class="btn btn-outline-primary btn-lg asbut" routerLink="/checkout" >Continuar</button>
-        
+         @if(calcularTotal() <=0){
+            <button type="button" class="btn btn-outline-primary btn-lg asbut a3" [disabled]="carritoProductos.length === 0" routerLink="/checkout" >Continuar</button>
+         }@else{
+         <button type="button" class="btn btn-outline-primary btn-lg asbut " routerLink="/checkout">Continuar</button>
+         }
     </div>
 </div>
