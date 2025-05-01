@@ -54,6 +54,8 @@ export class CarrComponent {
     this.actualizarCarrito();
   }
 
+  
+
   calcularTotal(): number {
     return this.carritoProductos.reduce(
       (acc, item) => acc + item.producto.price * item.cantidad,

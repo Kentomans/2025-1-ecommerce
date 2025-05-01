@@ -37,6 +37,12 @@ export class CartService {
   localStorage.setItem('idProduct', JSON.stringify(prod));
   }
 
+  removeCart() {
+    localStorage.removeItem('idProduct'); 
+    this.reset();
+  }
+  
+
 
   private count = signal<number>(0);
 

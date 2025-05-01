@@ -1,6 +1,22 @@
 
 <div class="container conta">
+    <div class="lade">
+       
+    <div class="step-container">
+        <div class="step active">
+          <div class="circle">1</div>
+          <p>ENVÍO</p>
+        </div>
+        <div class="line a"></div>
+      
+        <div class="step ">
+          <div class="circle">2</div>
+          <p>PAGO</p>
+        </div>
+    </div>  
+
     <h1 class="my-4">Dirección de envío</h1>
+      </div> 
     <div>
       
         <form class="row g-3 needs-validation" novalidate [formGroup]="adress" (ngSubmit)="onSubmit()">

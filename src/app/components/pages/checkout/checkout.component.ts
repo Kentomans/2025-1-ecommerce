@@ -12,9 +12,9 @@ import Swal from 'sweetalert2';
 export class CheckoutComponent {
 
       adress!: FormGroup;
-  router: any;
+ 
 
-      constructor(private fb: FormBuilder,private routeer: Router){
+      constructor(private fb: FormBuilder,private router: Router){
             this.adress = this.fb.group({
 
               name: ['',[ Validators.required]],
@@ -48,7 +48,7 @@ export class CheckoutComponent {
                 icon: "success",
                 confirmButtonColor: "#0d6efd",
               }).then(() => {
-                this.routeer.navigate(['/confirmacion']);
+                this.router.navigate(['/confirmacion']);
               });
             }
           });

@@ -13,5 +13,5 @@ export const routes: Routes = [
     { path: 'checkout', component:CheckoutComponent, title:"CheckOut"},
     { path: 'confirmacion', component:ConfirmationComponent, title:"Confirmacion"},
     { path: '', component:ContentComponent, title:"GameStore"},
-    { path: '**', redirectTo:'/home', title:"GameStore"},
+    { path: '**',pathMatch:'full', redirectTo:'/home', title:"GameStore"},
 ];

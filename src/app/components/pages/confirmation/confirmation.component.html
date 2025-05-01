@@ -1,4 +1,72 @@
-<p>confirmation works!</p>
-<div class="col-12">
-    <button class="btn btn-primary" routerLink="/checkout">Anterior</button>
+
+<div class="containe container">
+    <div class="step-container">
+        <div class="step ">
+          <div class="circle">1</div>
+          <p>ENVÍO</p>
+        </div>
+        <div class="line a "></div>
+      
+        <div class="step active">
+          <div class="circle">2</div>
+          <p>PAGO</p>
+        </div>
+    </div>  
+        <h1 class="my-4 ">Confirmacion</h1>
+            <div class="card color">
+                <div class="ha">
+                  <h3 class="m ha">Pago</h3>
+                    <div class="middle a">
+                        <i class="fa-solid fa-credit-card icon"></i><span class="ico">Tarjeta de crédito o débito</span>
+                            <div id="type">
+                                <h4>Datos de la Tarjeta</h4>
+                                <span> <i class="fa-brands fa-cc-visa ty"> </i><i class="fa-brands fa-cc-mastercard ty"></i> <i class="fa-brands fa-cc-amex ty"></i> <i class="fa-brands fa-cc-discover ty"></i></span>
+                            </div>
+
+                                <div id="inputs">
+                                   
+                                    <form novalidate [formGroup]="tarjet" (ngSubmit)="onSubmit()" class="row g-3 needs-validation" >
+  
+                                        <div class="col-md-12 position-relative space">
+                                          <input type="text" class="form-control" placeholder="Número de tarjeta" maxlength="19"
+                                                 inputmode="numeric" formControlName="numtarj" required>
+                                          @if (tarjet.get('numtarj')?.invalid && tarjet.get('numtarj')?.touched ) {
+                                            <div class="text-danger">Número de tarjeta inválido o incompleto (13 a 19 dígitos)</div>
+                                          }
+                                        </div>
+                                      
+                                        <div class="col-md-12 position-relative space">
+                                          <input type="text" class="form-control" placeholder="Nombre del titular"
+                                                 formControlName="nomtarj" required>
+                                          @if (tarjet.get('nomtarj')?.invalid && (tarjet.get('nomtarj')?.touched || tarjet.get('nomtarj')?.dirty)) {
+                                            <div class="text-danger">El Nombre es requerido</div>
+                                          }
+                                        </div>
+                                      
+                                        <div class="col-md-6 position-relative">
+                                          <input type="text" class="form-control" placeholder="MM/AA"
+                                                    maxlength="5" formControlName="date" required  (input)="formatFecha($event)" >
+                                          @if (tarjet.get('date')?.invalid && (tarjet.get('date')?.touched || tarjet.get('date')?.dirty)) {
+                                            <div class="text-danger">La Fecha es requerida</div>
+                                          }
+                                        </div>
+                                      
+                                        <div class="col-md-6 position-relative">
+                                          <input type="text" inputmode="numeric" maxlength="4" placeholder="CVV"
+                                                 class="form-control" formControlName="cvv" required>
+                                          @if (tarjet.get('cvv')?.invalid && (tarjet.get('cvv')?.touched || tarjet.get('cvv')?.dirty)) {
+                                            <div class="text-danger">CVV inválido (3 o 4 dígitos)</div>
+                                          }
+                                        </div>
+                                      
+                                        <div class="col-12 but">
+                                          <button class="btn btn-primary btn-lock" [disabled]="tarjet.invalid" type="submit">
+                                            Confirmar
+                                          </button>
+                                        </div>
+                                      </form>                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>
