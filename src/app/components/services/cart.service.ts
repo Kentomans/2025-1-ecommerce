@@ -21,16 +21,14 @@ export class CartService {
 
 
   addToCart(id:number){
-    this.incremento();
       const prod= this.getCart();
       prod.push(id);
       localStorage.setItem('idProduct', JSON.stringify(prod));
-      console.log('Producto agregado al carrito:', prod);
+      this.incremento();
   }
 
   removeFromCart(id:number){
     this.decremento();
-
   const prod = this.getCart(); 
   const index = prod.indexOf(id);
   if (index !== -1) {
@@ -55,7 +53,7 @@ export class CartService {
   }
 
   reset(){
-    this.count.set(0);
+    this.count.set(0)
   }
 
 }
