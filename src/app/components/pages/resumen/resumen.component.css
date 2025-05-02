@@ -58,6 +58,9 @@
     font-size: 20px;
   }
   
+ 
+
+ 
   
 .row {
     display: grid;
@@ -147,7 +150,7 @@
 }
 
 .error{
-    padding: 190px 0;
+    padding: 290px 0;
 }
 
 .btn:hover{

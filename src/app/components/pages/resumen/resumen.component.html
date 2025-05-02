@@ -1,3 +1,4 @@
+@if(carritoProductos.length >0){
 <div class="step-container">
     <div class="step active ">
       <div class="circle">1</div>
@@ -16,10 +17,15 @@
       <p>RESUMEN</p>
     </div>
 </div> 
+}
 
 <div id="resumen">
-    
-
+    @if(carritoProductos.length >0){
+    <h1 class="my-4">Resumen</h1>
+    <div id="part-infe">
+        <h2>Total </h2> <span>${{ calcularTotal() }}</span>
+     </div>
+    }
     <div class="row">
         @for (item of carritoProductos; track item) {
           <div class="conte ">
