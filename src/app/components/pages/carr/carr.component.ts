@@ -54,7 +54,11 @@ export class CarrComponent {
     this.actualizarCarrito();
   }
 
-  
+  Delete(id: number) {
+    this.cartService.Delete(id);
+    this.actualizarCarrito();
+  }
+
 
   calcularTotal(): number {
     return this.carritoProductos.reduce(

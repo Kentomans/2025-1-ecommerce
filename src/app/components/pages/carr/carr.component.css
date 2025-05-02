@@ -111,7 +111,10 @@
     font-size: 28px;
   }
 
+ #elimin a{
+  cursor: pointer;
  
+ }
   
   .asbut{
     font-size: 15px;

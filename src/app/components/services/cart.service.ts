@@ -21,6 +21,7 @@ export class CartService {
   }
 
 
+
   addToCart(id:number){
       const prod= this.getCart();
       prod.push(id);
@@ -38,8 +39,20 @@ export class CartService {
   localStorage.setItem('idProduct', JSON.stringify(prod));
   }
 
+  Delete(id: number) {
+    const prod = this.getCart(); 
+    const nuevaLista = prod.filter(p => p !== id); 
+  
+    const eliminados = prod.length - nuevaLista.length;
+    for (let i = 0; i < eliminados; i++) {
+      this.decremento();
+    }
+  
+    localStorage.setItem('idProduct', JSON.stringify(nuevaLista));
+  }
+  
+
   removeCart() {
-   
       localStorage.removeItem('idProduct'); 
       this.reset();
   }
