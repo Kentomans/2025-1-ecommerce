@@ -1,0 +1,52 @@
+<div class="step-container">
+    <div class="step active ">
+      <div class="circle">1</div>
+      <p>ENVÍO</p>
+    </div>
+    <div class="lines "></div>
+  
+    <div class="step active">
+      <div class="circle">2</div>
+      <p>PAGO</p>
+    </div>
+
+    <div class="lines   "></div>
+    <div class="step active">
+      <div class="circle">1</div>
+      <p>RESUMEN</p>
+    </div>
+</div> 
+
+<div id="resumen">
+    
+
+    <div class="row">
+        @for (item of carritoProductos; track item) {
+          <div class="conte ">
+            <div class="card h-100 color ">
+              <img [src]="item.producto.img" class="card-img-top" [alt]="item.producto.name">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">{{ item.producto.name }}</h5>
+                <p class="text-center price">${{ item.producto.price }}</p>
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                  <span class="px-2">Canntidad {{ item.cantidad }}</span>
+                </div>
+                <p class="text-center fw-bold">Total: ${{ item.producto.price * item.cantidad }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      @if(carritoProductos.length ===0){
+            <h1 class="error">¡Ups! Error al cargar el resumen</h1>
+      }
+
+      <div class="but">
+        <button class="btn btn-primary btn-lock btn-lg" (click)="reser()" type="submit">
+          Confirmar
+        </button>
+      </div>
+
+
+</div>

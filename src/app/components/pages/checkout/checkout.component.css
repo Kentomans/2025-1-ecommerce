@@ -48,12 +48,32 @@
   .line {
     flex-grow: 1;
     height: 4px;
-    background-color: #ccc;
+    background-color: #f4a700;
     margin: 0 10px;
     border-radius: 2px;
   }
 
- 
+  .a{
+    background-color: #f4a700;
+  }
+
+  .btn{
+    background-color: #f4a700;
+    border: 1px solid black;
+}
+
+.btn:hover{
+    background-color: #f4a700;
+    border: 1px solid black;
+}
+
+.acheck{
+    border: 1px solid black;
+}
+
+.acheck:checked{
+  background-color: #f4a700;
+}
 
 .step-container {
     padding: 10px; 
@@ -68,7 +88,15 @@
     font-size: 14px; 
 }
 
-.line {
+.lines {
     height: 3px; 
     margin: 0 8px; 
+}
+
+.lines {
+  height: 3px; 
+  margin: 0 8px; 
+  flex-grow: 1;
+  background-color: #ccc;
+  border-radius: 2px;
 }

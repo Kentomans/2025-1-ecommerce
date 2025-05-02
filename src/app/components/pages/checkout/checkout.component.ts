@@ -33,16 +33,6 @@ export class CheckoutComponent {
 
       onSubmit(): void {
         if (this.adress.valid) {
-          Swal.fire({
-            title: "¿La información es correcta?",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#0d6efd",
-            cancelButtonColor: "#0d6efd",
-            confirmButtonText: "Sí!",
-            cancelButtonText: "Cancelar"
-          }).then((result) => {
-            if (result.isConfirmed) {
               Swal.fire({
                 title: "Guardado!",
                 icon: "success",
@@ -50,14 +40,8 @@ export class CheckoutComponent {
               }).then(() => {
                 this.router.navigate(['/confirmacion']);
               });
-            }
-          });
         }
       }
       
 
-    
-
-     
-   
 }

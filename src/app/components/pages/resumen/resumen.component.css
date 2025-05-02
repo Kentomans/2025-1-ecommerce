@@ -1,4 +1,11 @@
 
+#resumen{
+  margin: 0 120px;
+  display:grid;
+  justify-content: center;
+}
+
+
 #cart-container{
     padding: 20px;
     display: flex;
@@ -28,11 +35,11 @@
 
   .color{
     background-color: rgb(221, 221, 221);
-    box-shadow: rgb(3, 120, 255) 0px 0px 0px 2px;
+    box-shadow:  #f4a700 0px 0px 0px 2px;
   }
 
   .price {
-    color: rgb(0, 71, 151);
+    color: #f4a700;;
   }
 
   .card-s {
@@ -40,12 +47,17 @@
     flex-direction: column;
     justify-content: space-between; 
     padding: 10px 70px;
-    margin: 10% 20px;
+    margin: 15% 20px;
     background-color: rgb(221, 221, 221);
     color: black;
     border-radius: 9px;
     height: 450px;
   }
+
+  .but button{
+    font-size: 20px;
+  }
+  
   
 .row {
     display: grid;
@@ -67,12 +79,12 @@
   
   #nada h1{
        text-align: center;
-       font-size: 68px;
+       font-size: 78px;
        align-items: center;
        height: 50vh; 
        display: flex;
        justify-content: center; 
-     
+    
   }
 
   button{
@@ -122,4 +134,96 @@
     cursor: no-drop;
   }
 
+  .btn{
+    background-color: #f4a700;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.but {
+    text-align: center;
+    margin: 20px 0px;
+       
+}
+
+.error{
+    padding: 190px 0;
+}
+
+.btn:hover{
+    background-color: #f4a700;
+    border: 1px solid black;
+}
+
   
+.step-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+  }
+  
+  .step.active {
+    color: #f4a700;
+    font-weight: bold;
+  }
+  
+  .circle {
+    border: 2px solid #f4a700;
+    color: #f4a700;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #ccc;
+    margin: 0 10px;
+    border-radius: 2px;
+  }
+
+.step-container {
+    padding: 10px; 
+    border-radius: 8px;
+    padding: 2% 25% ;
+}
+
+.circle {
+    width: 24px; 
+    height: 24px;
+    line-height: 22px; 
+    font-size: 14px; 
+}
+
+.line {
+    height: 3px; 
+    margin: 0 8px; 
+    flex-grow: 1;
+  
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
+.lines {
+  height: 3px; 
+  margin: 0 8px; 
+  flex-grow: 1;
+  background-color: #f4a700;
+  border-radius: 2px;
+}

@@ -1,18 +1,27 @@
 
 <div class="containe container">
     <div class="step-container">
-        <div class="step ">
+        <div class="step active ">
           <div class="circle">1</div>
           <p>ENVÍO</p>
         </div>
-        <div class="line a "></div>
+        <div class="lines "></div>
       
         <div class="step active">
           <div class="circle">2</div>
           <p>PAGO</p>
         </div>
+
+        <div class="line   "></div>
+        <div class="step ">
+          <div class="circle">1</div>
+          <p>RESUMEN</p>
+        </div>
     </div>  
-        <h1 class="my-4 ">Confirmacion</h1>
+        <div>
+            <h1 class="my-4 ">Confirmacion</h1>
+        </div>
+        <div class="">
             <div class="card color">
                 <div class="ha">
                   <h3 class="m ha">Pago</h3>
@@ -47,7 +56,7 @@
                                           <input type="text" class="form-control" placeholder="MM/AA"
                                                     maxlength="5" formControlName="date" required  (input)="formatFecha($event)" >
                                           @if (tarjet.get('date')?.invalid && (tarjet.get('date')?.touched || tarjet.get('date')?.dirty)) {
-                                            <div class="text-danger">La Fecha es requerida</div>
+                                            <div class="text-danger">La Fecha es requerida o es incorrecta</div>
                                           }
                                         </div>
                                       
@@ -69,4 +78,5 @@
                     </div>
                 </div>
             </div>
+        </div>
 </div>

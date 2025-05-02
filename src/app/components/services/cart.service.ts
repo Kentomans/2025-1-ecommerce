@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+import { Product } from './model/producto';
 
 @Injectable({
   providedIn: 'root'
@@ -38,11 +39,11 @@ export class CartService {
   }
 
   removeCart() {
-    localStorage.removeItem('idProduct'); 
-    this.reset();
+   
+      localStorage.removeItem('idProduct'); 
+      this.reset();
   }
   
-
 
   private count = signal<number>(0);
 
@@ -62,4 +63,7 @@ export class CartService {
     this.count.set(0)
   }
 
+  
 }
+
+
