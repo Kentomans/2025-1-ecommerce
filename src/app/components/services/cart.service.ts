@@ -20,8 +20,6 @@ export class CartService {
     return prod;
   }
 
-
-
   addToCart(id:number){
       const prod= this.getCart();
       prod.push(id);
@@ -42,7 +40,7 @@ export class CartService {
   Delete(id: number) {
     const prod = this.getCart(); 
     const nuevaLista = prod.filter(p => p !== id); 
-  
+
     const eliminados = prod.length - nuevaLista.length;
     for (let i = 0; i < eliminados; i++) {
       this.decremento();
@@ -56,7 +54,6 @@ export class CartService {
       localStorage.removeItem('idProduct'); 
       this.reset();
   }
-  
 
   private count = signal<number>(0);
 

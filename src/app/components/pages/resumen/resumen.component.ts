@@ -1,8 +1,5 @@
-import { Component, Signal } from '@angular/core';
-import { CartService } from '../../services/cart.service';
-import { ProductService } from '../../services/product.service';
+import { Component } from '@angular/core';
 import { Product } from '../../services/model/producto';
-import { ResumenService } from '../../services/resumen.service';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -26,7 +23,6 @@ export class ResumenComponent {
     const resumen = localStorage.getItem('resumen');
     if (resumen) {
       this.carritoProductos = JSON.parse(resumen);
-      console.log('Resumen cargado:', this.carritoProductos);
     }
   }
 
@@ -35,7 +31,6 @@ export class ResumenComponent {
     localStorage.removeItem('idProduct');  
     this.carritoProductos = [];  
     this.router.navigate(['/home']);
-    console.log('Resumen y carrito eliminados');
   }
 
 

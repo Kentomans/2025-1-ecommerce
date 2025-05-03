@@ -158,6 +158,9 @@
     border: 1px solid black;
 }
 
+#cantidad1{
+    font-weight: bold;
+}
   
 .step-container {
     display: flex;

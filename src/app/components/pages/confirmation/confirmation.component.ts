@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../services/model/producto';
 import { ProductService } from '../../services/product.service';
-import { ResumenService } from '../../services/resumen.service';
 
 @Component({
   selector: 'app-confirmation',
