@@ -45,7 +45,12 @@
                 <h4>Subtotal </h4><span>${{ calcularTotal()}}</span>
             </div>
             <div class="cont-1">
-                <h4>Costo de Envio</h4> <span>Gratis</span>
+                <h4>Costo de Envio</h4>  @if (carritoProductos.length >= 1) {
+                  <span>Gratis</span>
+                } 
+                @if (carritoProductos.length === 0) {
+                 <span>Sin Calcular</span>
+               } 
             </div>
          </div>
          <div id="part-infe">
